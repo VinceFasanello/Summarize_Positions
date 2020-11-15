@@ -1,0 +1,12 @@
+"0","```r
+# generate dataframe with all holdings
+holdings <- NA
+for(i in ETFS){
+    temp <- get(i)
+    holdings <- rbind(holdings, temp)
+}; rm(temp, i); holdings <- holdings[2:nrow(holdings), ]
+
+
+# list of unique holdings
+holdingNames <- unique(holdings$Symbol)
+```"

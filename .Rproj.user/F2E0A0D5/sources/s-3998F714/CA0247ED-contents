@@ -14,7 +14,7 @@ for (i in ETFS) {
   temp <- read.csv(file = paste0("ETF_",i,".csv"))
   colnames(temp) <- c("Symbol", "Description", "Country", "Weight")
   temp <- temp[temp$Symbol != "",]
-  temp$Weight <- temp$Weight/sum(temp$Weight, na.rm = T)
+  temp$Weight <- temp$Weight/sum(temp$Weight) # holding weights sum to 1 within each ETF.
   assign(paste0(i), temp)
 }; rm(temp, i)
 

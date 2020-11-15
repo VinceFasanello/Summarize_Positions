@@ -1,0 +1,14 @@
+"0","```r
+# visualize
+hist(myAccount$CVW, breaks = 100)
+hist(myAccount$CVW[myAccount$CVW < 5], breaks = 100)
+hist(myAccount$CVW[myAccount$CVW < 1], breaks = 100)
+
+mySummary <- cbind(
+  aggregate(myAccount$CVW, by=list(Category=myAccount$Country), FUN=sum),
+  aggregate(myAccount$CVW, by=list(Category=myAccount$Country), FUN=length)[,2]
+
+)
+mySummary <- mySummary[order(mySummary[,2], decreasing = T),]
+colnames(mySummary) <- c(\"Country\", \"CVW\", \"nHoldings\")
+```"

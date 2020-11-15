@@ -1,0 +1,9 @@
+"0","```r
+# concatonate with non etf holdings
+accSUMother <- accSUMother[,c(\"Symbol\", \"Description\", \"Country\", \"CVW\")]
+colnames(accSUMother)[3] <- \"Country\"
+myAccount <- rbind(accSUMother, holdingsSummary)
+myAccount$CVW <- myAccount$CVW*100
+myAccount <- myAccount[order(myAccount$CVW, decreasing = T),]
+myAccount$Country <- as.factor(myAccount$Country)
+```"

@@ -1,0 +1,9 @@
+"0","```r
+# calculate account weight for each ETF entry 
+for (i in ETFS) {
+  temp <- get(i)
+  temp$CVW <- NA; temp$CBW <- NA
+  temp$CVW <- temp$Weight*accSUMetf[accSUMetf$Symbol == i,]$CVW
+  assign(paste0(i), temp)
+}; rm(temp, i)
+```"
