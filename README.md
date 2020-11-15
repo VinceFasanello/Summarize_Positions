@@ -15,7 +15,7 @@ Instructions:
 		
 
 	[B] Software Requirements:
-		(1) R
+		(1) R (*built under version 4.0.3; use older versions of R at your own risk)
 		(2) RStudio
 		(3) R Package: "here" (uncomment line 8 in Calculate.R to auto-install)
 	
