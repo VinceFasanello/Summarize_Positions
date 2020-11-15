@@ -52,7 +52,8 @@ temp$symbol <- as.factor(temp$symbol) # fix some factors.
 temp$country <- as.factor(temp$country)
 colnames(temp)[4] <- "propOfAccount" # rename the cvWeight column to be more readable.
 temp <- temp[order(temp$currentValue, decreasing = T),] # sort in descending order by currentValue
+rownames(temp) <- seq(1, nrow(temp))
 decomposedPositions <- temp; rm(temp) # assign to the appropriate output name.
 
 # output the decomposedPositions CSV -------------------------------------------
-write.csv(decomposedPositions, file = here("decomposedPositions.csv")) # save the output!
+write.csv(decomposedPositions, file = here("decomposedPositions.csv"), row.names = F) # save the output!
