@@ -2,6 +2,7 @@
 .Rhistory
 .Rdata
 .Ruserdata
+
 *.Rproj.user
 *.Rhistory
 *.Rdata
