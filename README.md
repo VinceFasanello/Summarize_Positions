@@ -2,6 +2,7 @@
  Summarize account positions to explore holdings overlap among all ETFs and individually owned stocks.
 
 Instructions:
+
 	[A] instructions to RUN:
 		(1) install software (see "[B]" below)
 		(2) prepare input files
@@ -14,7 +15,7 @@ Instructions:
 		
 
 	[B] Software Requirements:
-		(1) R
+		(1) R (*built under version 4.0.3; use older versions of R at your own risk)
 		(2) RStudio
 		(3) R Package: "here" (uncomment line 8 in Calculate.R to auto-install)
 	
